@@ -1,1 +1,43 @@
 Three js advanced by bruno simon
+
+PART 1
+what is three.js?
+js api
+renders triangles per pixel for rendering 
+canvas 
+uses gpu
+points are used and positioned eg: vertices of a cube is positioned and joined to get a cube
+
+what is shaders?
+the instructions to place the points and draw the pixels are written in shaders
+
+how to move objects?
+position,rotaion, scale
+
+What is euler and how to use it?
+Euler is easy to understand but this asix order can be problematic, this is why most engines and 3D softwares use Quaternion
+when you update rotation it will update Quaternion
+
+camera lookAt property?
+camera.lookAt(new THREE.Vector3(...)) or can add mesh.position to make it look at it
+
+what is scene graph?
+we can use group to give the multiple objects properties like position rotaion etc
+
+how to configure animation?
+we can use THREE.clock.getElapsedTime to make the animation to adjust animation to fps instead of date.now()
+we can use gsap for animations
+
+CAMERAS
+-Array camera
+it render the scene from multiple cameras on specific areas of render ,eg: multiplier games on same screen
+-camera
+this a abstract parent class cannot be used directly
+-stereo camera
+it render the scene through two cameras that mimic the eyes to create a parallax effect
+uses with devices like vr headset,red and blue glasses or cardboard
+-cube camera
+it does 6 renders, each one facing a different direction can render the surrounding for things like environment map,reflection or shadow map
+-orthographic camera
+render the scene without perspective
+-perspective camera
